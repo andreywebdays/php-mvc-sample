@@ -1,0 +1,36 @@
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+
+START TRANSACTION;
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+CREATE DATABASE IF NOT EXISTS `php_mvc_sample` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `php_mvc_sample`;
+
+CREATE TABLE `users` (
+  `user_id` int(11) NOT NULL,
+  `user_first_name` varchar(50) NOT NULL,
+  `user_last_name` varchar(50) NOT NULL,
+  `user_dob` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`user_id`);
+
+
+ALTER TABLE `users`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+INSERT INTO `users` (`user_id`, `user_first_name`, `user_last_name`, `user_dob`) VALUES
+(1, 'Andrey', 'WebDays', '1990-03-09'),
+(2, 'Daniel', 'Sample', '1985-03-22'),
+(3, 'Jane', 'Olsen', '1991-05-10');
+
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
