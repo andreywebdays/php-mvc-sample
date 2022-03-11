@@ -13,8 +13,13 @@ include 'includes/incAutoLoader.php';
     <title>MVC</title>
 </head>
 <body>
-    
-    
-
+    <?php
+        // testing clsUsersView class
+        $user_obj_1 = new clsUsersView();
+        $user_obj_1->showUser("Andrey");
+        // testing clsUsersController class
+        $user_obj_2 = new clsUsersController();
+        $user_obj_2->createUser("Jane", "Olsen", "1991-05-10");
+    ?>
 </body>
 </html>

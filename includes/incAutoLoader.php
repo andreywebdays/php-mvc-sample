@@ -9,9 +9,7 @@ function myAutoLoader ($class_name)
     if (strpos($url, 'includes') !== false) 
     {
         $path = '../classes/';
-    } 
-    else 
-    {
+    } else {
         $path = 'classes/';
     }
     
