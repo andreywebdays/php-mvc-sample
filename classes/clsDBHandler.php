@@ -1,11 +1,12 @@
 <?php
 
+// this is our DB connection handler class
 class clsDBHandler
 {
     private $host = "localhost";
     private $user = "root";
     private $pwd = "";
-    private $db_name = "oop_php_mvc";
+    private $db_name = "php_mvc_sample";
 
     protected function connect()
     {
