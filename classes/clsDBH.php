@@ -6,7 +6,7 @@ class clsDBH
     private $host = "localhost";
     private $user = "root";
     private $pwd = "";
-    private $db_name = "php_mvc_sample";
+    private $db_name = "prj009";
 
     protected function connect()
     {
